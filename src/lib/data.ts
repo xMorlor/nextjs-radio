@@ -1,7 +1,5 @@
 "use server";
 
-import { Track } from "@radix-ui/react-slider";
-
 interface Genre {
 	id: number;
 	name: string;
@@ -38,8 +36,6 @@ export async function fetchGenres(): Promise<string[]> {
 		throw new Error("Failed to fetch data.");
 	}
 }
-
-//////////////////////////////////////////////////
 
 interface Radio {
 	id: number;
@@ -146,16 +142,3 @@ export async function fetchRadio(
 		throw new Error("Failed to fetch data.");
 	}
 }
-
-/**
- * GET https://api.deezer.com/radio/genres done
- * -> title == genre done
- * -> radios random select done
- *
- * -> GET tracklist
- *
- * -> GET https://api.deezer.com/radio/37765/tracks
- * -> hrát jen songy ne alba
- * -> link
- * po dohrání písničky random select další z tracklistu
- */

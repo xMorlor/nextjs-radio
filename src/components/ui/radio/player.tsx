@@ -140,11 +140,6 @@ export default function Player({ songs }: { songs: Song[] }) {
 	};
 
 	useEffect(() => {
-		console.log(songs);
-		console.log(songs);
-		console.log(songs);
-		console.log(songs);
-
 		setSongName(songs[songIndex].title);
 		setAuthorName(songs[songIndex].artist.name);
 		setCoverImage(songs[songIndex].album.cover_medium);
